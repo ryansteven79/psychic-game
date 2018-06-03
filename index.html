@@ -9,28 +9,43 @@
     <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.1.1/superhero/bootstrap.min.css"
     />
     <script src="assets/psychic-javascript.js"></script>
+    <style>
+        #you-win {
+            display: none;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <div class="row">
             <div class="col">
-                <h1>The Psychic Game</h1>
-                <p>Guess what letter I'm thinking of</p>
-                <p id="win">Wins:</p>
-                <p id="loss">Losses:</p>
-                <p id="guessesLeft">Guesses Left: 10</p>
-                <p id="guessesSoFar">Your Guesses so far:</p>
-            </div>
-            <div class="col">
-                <button onclick="resetGame()">Start Over</button>
-            </div>
-            <div class="col">
-
+                <div class="jumbotron">
+                    <h1 class="display-3">Psychic Game</h1>
+                </div>
             </div>
         </div>
     </div>
+    <div class="container" style="margin-top: 20px">
+        <div class="row">
+            <div class="col-6">
+                <img style="width:90%;" src="https://media.giphy.com/media/tpYWbMVkPauEU/giphy.gif">
+            </div>
+            <div class="col-6" id="you-win">
+                <h1>You Win!</h1>
+                <button id="btn" onclick="resetGame()" style="display:none;">Start Over</button>
+            </div>
+            <div class="col-6" id="board">
+                <h4 class="text-primary">Guess what letter I'm thinking of</h4>
+                <p id="win">Wins: 0</p>
+                <p id="loss">Losses: 0</p>
+                <p id="guessesLeft">Guesses Left: 10</p>
+                <p id="guessesSoFar">Your Guesses So Far:</p>
+            </div>
 
+        </div>
+
+    </div>
 </body>
 
 </html>
