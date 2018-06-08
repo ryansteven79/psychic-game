@@ -3,7 +3,7 @@ var wins = 0;
 var losses = 0;
 var guessesLeft = 10;
 var guessesSoFar = [];
-var computerChoice = alphabet[Math.floor(Math.random() * (alphabet.length))].toLowerCase();
+// var computerChoice = alphabet[Math.floor(Math.random() * (alphabet.length))].toLowerCase();
 
 function resetGame() {
     // console.log("Game Over!");
@@ -20,8 +20,6 @@ function resetGame() {
     document.getElementById("you-win").style.display = "none";
     document.getElementById("board").style.display = "block";
     document.getElementById("btn").style.display = "none";
-
-
 }
 
 function gameOver() {
@@ -36,10 +34,8 @@ function youWin() {
     x.style.display === "none";
 }
 
-
-
 document.onkeypress = function (event) {
-    console.log("keyCode: " + event.keyCode); //helper//
+    // console.log("keyCode: " + event.keyCode); //helper//
     console.log(computerChoice);
     if (event.keyCode < 97 || event.keyCode > 122) {
         alert("invalid key!")
@@ -48,7 +44,7 @@ document.onkeypress = function (event) {
     } else {
         var letter = event.key.toLowerCase();
         guessesSoFar.push(letter);
-        console.log(letter)
+        console.log("User guess: " + letter)
         guessesSoFar;
         // var x = "";
         // for (var i = 0; i < guessesSoFar.length; i++) {
