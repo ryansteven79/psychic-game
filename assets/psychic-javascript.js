@@ -8,8 +8,8 @@ var guessesSoFar = [];
 function resetGame() {
     // console.log("Game Over!");
     guessesLeft = 10;
-    wins = 0;
-    losses = 0;
+    // wins = 0;
+    // losses = 0;
     document.getElementById("win").innerHTML = "Wins: " + wins;
     document.getElementById("loss").innerHTML = "Losses: " + losses;
     document.getElementById("guessesLeft").innerHTML = "Guesses Left: " + guessesLeft;
@@ -55,7 +55,6 @@ document.onkeypress = function (event) {
     document.getElementById("guessesSoFar").innerHTML = "Your Guesses So Far: " + guessesSoFar;
     if (letter !== computerChoice) {
         // console.log("Wrong!!!");
-        losses++;
         document.getElementById("loss").innerHTML = "Losses: " + losses;
     } else {
         wins++;
@@ -68,6 +67,7 @@ document.onkeypress = function (event) {
     guessesLeft--;
     document.getElementById("guessesLeft").innerHTML = "Guesses Left: " + guessesLeft;
     if (guessesLeft <= 0) {
+        losses++;
         return gameOver();
     }
 }
